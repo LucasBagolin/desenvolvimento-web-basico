@@ -1,0 +1,131 @@
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #001f3f;
+}
+
+main {
+    background-color: #f0f8ff;
+    color: #333333;
+    padding: 20px;
+    margin: 10px;
+    border: 2px dashed #7abaff;
+}
+
+footer {
+    background-color: #222;
+    color: #f2f2f2;
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted #444;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.destaque {
+    font-style: italic;
+    background-color: #d5d6d8;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#importante {
+    border-top: 5px solid #97cddd;
+}
+
+
+.galeria-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+}
+
+.galeria figure {
+    margin: 0;
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #003366;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-header {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #002244;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .nav-menu.ativo {
+        display: flex;
+    }
+}
